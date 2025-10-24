@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import footer_shape_1 from "@/assets/img/footer/bg-shape.png";
-import footer_logo from "@/assets/img/logo/logo.png";
+import footer_logo from "@/assets/img/logo/Logo.png";
 import SocialLinks, { CopyRight } from "@/components/common/SocialLinks";
 
 interface DataType {

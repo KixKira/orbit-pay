@@ -8,7 +8,7 @@ import SearchBar from "./Menu/SearchBar";
 import Offcanvas from "./Menu/Offcanvas";
 import UseSticky from "@/hooks/UseSticky";
 import OnPageMenu from "./Menu/OnPageMenu";
-import HeaderLogo from "@/assets/img/logo/logo.png";
+import HeaderLogo from "@/assets/img/logo/Logo.png";
 import SocialLinks from "@/components/common/SocialLinks";
 
 const HeaderOne = ({ onePageHomeOne }: any) => {
