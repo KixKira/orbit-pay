@@ -2,19 +2,27 @@
 
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function SuccessPage() {
-  const searchParams = useSearchParams();
-  const sessionId = searchParams.get("session_id");
+  // Avoid Next.js prerender-time useSearchParams hook issues by
+  // reading search params from window.location inside a client effect.
+  const [sessionId, setSessionId] = useState<string | null>(null);
   const [sessionData, setSessionData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (sessionId) {
+    // Read the search params on the client only (use globalThis to satisfy linters)
+    const sp =
+      typeof globalThis !== "undefined" && globalThis.location
+        ? new URLSearchParams(globalThis.location.search)
+        : null;
+    const id = sp?.get("session_id") ?? null;
+    setSessionId(id);
+
+    if (id) {
       // Obtener detalles de la sesión
-      fetch(`/api/session?session_id=${sessionId}`)
+      fetch(`/api/session?session_id=${id}`)
         .then((res) => res.json())
         .then((data) => {
           setSessionData(data);
@@ -27,7 +35,7 @@ export default function SuccessPage() {
     } else {
       setLoading(false);
     }
-  }, [sessionId]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-6">
