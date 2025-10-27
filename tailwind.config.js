@@ -9,6 +9,15 @@ const config = {
   ],
   theme: {
     extend: {
+      colors: {
+        brand: {
+          900: "#00003E", // Penn Blue
+          800: "#00108B", // Phthalo blue
+          700: "#0050D4", // Byzantine blue
+          500: "#008DFF", // Dodger blue
+          400: "#00ABFF", // Picton Blue
+        },
+      },
       animation: {
         fadeIn: "fadeIn 0.6s ease-out forwards",
         fadeInUp: "fadeInUp 0.8s ease-out forwards",

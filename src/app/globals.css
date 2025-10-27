@@ -206,12 +206,12 @@ select:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #9333ea 0%, #3b82f6 100%);
+  background: linear-gradient(180deg, #008DFF 0%, #00ABFF 100%);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #7c3aed 0%, #2563eb 100%);
+  background: linear-gradient(180deg, #0050D4 0%, #00108B 100%);
 }
 
 /* Soporte para Firefox */
@@ -229,16 +229,16 @@ select:focus {
 }
 
 /* Gradientes personalizados */
-.gradient-purple {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.gradient-brand-dark {
+  background: linear-gradient(135deg, #00003E 0%, #00108B 40%, #0050D4 100%);
 }
 
-.gradient-blue {
-  background: linear-gradient(135deg, #667eea 0%, #3b82f6 100%);
+.gradient-brand {
+  background: linear-gradient(135deg, #008DFF 0%, #00ABFF 100%);
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.gradient-text-brand {
+  background: linear-gradient(135deg, #00ABFF 0%, #008DFF 60%, #0050D4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -246,11 +246,11 @@ select:focus {
 
 /* Sombras personalizadas */
 .shadow-glow {
-  box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+  box-shadow: 0 0 28px rgba(0, 141, 255, 0.18);
 }
 
-.shadow-glow-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+.shadow-glow-brand {
+  box-shadow: 0 8px 40px rgba(0, 80, 212, 0.12);
 }
 
 /* Animación para hover en cards */

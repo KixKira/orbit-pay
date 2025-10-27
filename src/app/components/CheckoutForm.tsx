@@ -121,7 +121,7 @@ export default function CheckoutForm() {
               onChange={handleChange}
               required
               placeholder="0.00"
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none text-lg font-semibold"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-lg font-semibold text-black/50"
             />
           </div>
           <p className="text-xs text-gray-500 mt-1">Monto mínimo: $0.50 USD</p>
@@ -143,7 +143,7 @@ export default function CheckoutForm() {
             onChange={handleChange}
             required
             placeholder="Juan Pérez"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50"
           />
         </div>
 
@@ -163,7 +163,7 @@ export default function CheckoutForm() {
             onChange={handleChange}
             required
             placeholder="tu@email.com"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50"
           />
         </div>
 
@@ -183,7 +183,7 @@ export default function CheckoutForm() {
             onChange={handleChange}
             required
             placeholder="1234567890"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50"
           />
           <p className="text-xs text-gray-500 mt-1">
             Solo números, sin espacios ni guiones
@@ -192,10 +192,10 @@ export default function CheckoutForm() {
 
         {/* Resumen */}
         {formData.amount && Number.parseFloat(formData.amount) > 0 && (
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+          <div className="bg-[#00abff] border border-purple-200 rounded-lg p-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-gray-700 font-medium">Monto a pagar:</span>
-              <span className="text-2xl font-bold text-purple-600">
+              <span className="text-2xl font-bold text-[#00003e]">
                 ${Number.parseFloat(formData.amount).toFixed(2)}
               </span>
             </div>
@@ -209,7 +209,7 @@ export default function CheckoutForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-105"
+          className="w-full bg-gradient-to-r from-[#00003e] to-[#00abff] text-white py-3 rounded-lg font-semibold hover:from-[#00108b] hover:to-[#008dff] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-105"
         >
           {loading ? (
             <>

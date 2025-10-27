@@ -38,8 +38,8 @@ export default function SuccessPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-6">
-      <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-md w-full">
+    <div className="min-h-screen bg-transparent flex items-center justify-center px-6">
+      <div className="bg-white/95 rounded-2xl shadow-glow-brand p-8 md:p-12 max-w-md w-full backdrop-blur-lg">
         <div className="text-center">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-fadeIn">
             <CheckCircle className="w-12 h-12 text-green-600" />
@@ -56,10 +56,10 @@ export default function SuccessPage() {
 
           {loading ? (
             <div className="flex justify-center py-4">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2" style={{ borderColor: '#008DFF' }}></div>
             </div>
           ) : sessionData ? (
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 mb-6 animate-fadeInUp animation-delay-400">
+            <div className="bg-gradient-brand rounded-xl p-6 mb-6 animate-fadeInUp animation-delay-400 shadow-glow">
               <h3 className="font-semibold text-gray-900 mb-4 text-lg">
                 Detalles del Pago
               </h3>
@@ -99,10 +99,7 @@ export default function SuccessPage() {
           ) : null}
 
           <div className="space-y-4 animate-fadeInUp animation-delay-600">
-            <Link
-              href="/"
-              className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all hover:scale-105"
-            >
+            <Link href="/" className="block w-full bg-gradient-to-r from-brand-500 to-brand-400 text-white py-3 rounded-lg font-semibold transition-all hover:scale-105">
               Volver al Inicio
             </Link>
 

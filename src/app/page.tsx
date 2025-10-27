@@ -50,10 +50,10 @@ export default function Home() {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div
             className={`text-2xl font-bold transition-colors ${
-              scrolled ? "text-purple-600" : "text-white"
+              scrolled ? "text-[#00003E]" : "text-white"
             }`}
           >
-            TuMarca
+            OrbitPay
           </div>
 
           {/* Desktop Menu */}
@@ -69,7 +69,7 @@ export default function Home() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`font-medium transition-colors hover:text-purple-600 ${
+                className={`font-medium transition-colors hover:text-[#0050d4] ${
                   scrolled ? "text-gray-700" : "text-white"
                 }`}
               >
@@ -116,7 +116,7 @@ export default function Home() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-gray-700 font-medium hover:text-purple-600 transition-colors text-left"
+                  className="text-gray-700 font-medium hover:text-[#0050d4] transition-colors text-left"
                 >
                   {item === "inicio"
                     ? "Inicio"
@@ -139,14 +139,14 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-32 pb-20"
+        className="relative overflow-hidden bg-gradient-to-br from-[#00003e] via-[#0050d4] to-[#00abff] pt-32 pb-20"
       >
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
 
         {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#008dff] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-[#0050d4] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-[#00108d] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
         <div className="relative container mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -154,7 +154,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Bienvenido a Orbit
               </h1>
-              <p className="text-xl text-purple-200">
+              <p className="text-xl text-white/90">
                 Brinda ayuda financiera y afecto para tu hogar.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
@@ -169,7 +169,7 @@ export default function Home() {
               </div>
               <button
                 onClick={() => scrollToSection("servicios")}
-                className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors pt-4"
+                className="flex items-center gap-2 text-white hover:text-[#00abff] transition-colors pt-4"
               >
                 <span>Ver más</span>
                 <ChevronDown className="w-5 h-5 animate-bounce" />
