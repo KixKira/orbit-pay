@@ -491,8 +491,24 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <form className="space-y-4 animate-fadeInUp animation-delay-600">
+            {/* Contact Form - Getform.io integration */}
+            <form
+              action="https://getform.io/f/644195b9-0fd5-4884-b44d-32ef56268ace"
+              method="POST"
+              encType="multipart/form-data"
+              className="space-y-4 animate-fadeInUp animation-delay-600"
+            >
+              {/* Redirect after submit (optional) */}
+              <input type="hidden" name="_redirect" value="/gracias" />
+              {/* Anti-spam honeypot */}
+              <input
+                type="text"
+                name="_gotcha"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
               <div>
                 <label
                   htmlFor="name"
@@ -503,6 +519,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition"
                   placeholder="Tu nombre"
@@ -519,6 +536,7 @@ export default function Home() {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition"
                   placeholder="tu@email.com"
@@ -535,6 +553,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition"
                   placeholder="¿En qué podemos ayudarte?"
@@ -550,6 +569,7 @@ export default function Home() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition resize-none"
