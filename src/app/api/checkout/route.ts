@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       success_url: `${request.headers.get(
         "origin"
       )}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${request.headers.get("origin")}/canceled`,
+      cancel_url: `${request.headers.get("origin")}/cancel`,
       // Configuración adicional
       billing_address_collection: "auto",
       phone_number_collection: {
