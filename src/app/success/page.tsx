@@ -56,7 +56,10 @@ export default function SuccessPage() {
 
           {loading ? (
             <div className="flex justify-center py-4">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2" style={{ borderColor: '#008DFF' }}></div>
+              <div
+                className="animate-spin rounded-full h-8 w-8 border-b-2"
+                style={{ borderColor: "#008DFF" }}
+              ></div>
             </div>
           ) : sessionData ? (
             <div className="bg-gradient-brand rounded-xl p-6 mb-6 animate-fadeInUp animation-delay-400 shadow-glow">
@@ -66,7 +69,7 @@ export default function SuccessPage() {
               <div className="space-y-3 text-left">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Monto:</span>
-                  <span className="font-bold text-purple-600 text-xl">
+                  <span className="font-bold text-blue-600 text-xl">
                     ${(sessionData.amount_total / 100).toFixed(2)} USD
                   </span>
                 </div>
@@ -99,7 +102,10 @@ export default function SuccessPage() {
           ) : null}
 
           <div className="space-y-4 animate-fadeInUp animation-delay-600">
-            <Link href="/" className="block w-full bg-gradient-to-r from-brand-500 to-brand-400 text-white py-3 rounded-lg font-semibold transition-all hover:scale-105">
+            <Link
+              href="/"
+              className="block w-full bg-gradient-to-r from-brand-500 to-brand-400 text-white py-3 rounded-lg font-semibold transition-all hover:scale-105"
+            >
               Volver al Inicio
             </Link>
 

@@ -90,9 +90,9 @@ export default function CheckoutForm() {
   };
 
   return (
-    <div>
+    <div className="-mt-6 px-4 sm:px-0">
       <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 leading-tight">
           Realiza tu Pago
         </h2>
         <p className="text-gray-600">
@@ -100,7 +100,10 @@ export default function CheckoutForm() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-3 max-w-full sm:max-w-sm md:max-w-md mx-auto px-2 sm:px-0"
+      >
         {/* Monto */}
         <div>
           <label
@@ -111,7 +114,7 @@ export default function CheckoutForm() {
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <DollarSign className="h-5 w-5 text-gray-400" />
+              <DollarSign className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
             </div>
             <input
               type="text"
@@ -121,7 +124,7 @@ export default function CheckoutForm() {
               onChange={handleChange}
               required
               placeholder="0.00"
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-lg font-semibold text-black/50"
+              className="w-full pl-10 pr-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-sm sm:text-base font-semibold text-black/50"
             />
           </div>
           <p className="text-xs text-gray-500 mt-1">Monto mínimo: $0.50 USD</p>
@@ -143,7 +146,7 @@ export default function CheckoutForm() {
             onChange={handleChange}
             required
             placeholder="Juan Pérez"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50"
+            className="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50 text-sm sm:text-base"
           />
         </div>
 
@@ -163,7 +166,7 @@ export default function CheckoutForm() {
             onChange={handleChange}
             required
             placeholder="tu@email.com"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50"
+            className="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50 text-sm sm:text-base"
           />
         </div>
 
@@ -183,7 +186,7 @@ export default function CheckoutForm() {
             onChange={handleChange}
             required
             placeholder="1234567890"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50"
+            className="w-full px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0050d4] focus:border-transparent outline-none text-black/50 text-sm sm:text-base"
           />
           <p className="text-xs text-gray-500 mt-1">
             Solo números, sin espacios ni guiones
@@ -192,10 +195,10 @@ export default function CheckoutForm() {
 
         {/* Resumen */}
         {formData.amount && Number.parseFloat(formData.amount) > 0 && (
-          <div className="bg-[#00abff] border border-purple-200 rounded-lg p-4">
+          <div className="bg-[#00abff] border border-blue-200 rounded-lg p-3 sm:p-4">
             <div className="flex justify-between items-center mb-2">
               <span className="text-gray-700 font-medium">Monto a pagar:</span>
-              <span className="text-2xl font-bold text-[#00003e]">
+              <span className="text-lg sm:text-xl font-bold text-[#00003e]">
                 ${Number.parseFloat(formData.amount).toFixed(2)}
               </span>
             </div>
@@ -209,23 +212,23 @@ export default function CheckoutForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-gradient-to-r from-[#00003e] to-[#00abff] text-white py-3 rounded-lg font-semibold hover:from-[#00108b] hover:to-[#008dff] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 hover:scale-105"
+          className="w-full bg-[#00003e] text-white py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#008dff] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 sm:gap-2 text-sm sm:text-base hover:scale-105"
         >
           {loading ? (
             <>
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-              Procesando...
+              <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white"></div>
+              <span className="text-sm sm:text-base">Procesando...</span>
             </>
           ) : (
             <>
-              <CreditCard className="w-5 h-5" />
-              Continuar al Pago
+              <CreditCard className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base">Continuar al Pago</span>
             </>
           )}
         </button>
 
         <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mt-4">
-          <Lock className="w-4 h-4" />
+          <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
           <span>Pago 100% seguro con Stripe</span>
         </div>
 

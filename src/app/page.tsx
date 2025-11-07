@@ -188,7 +188,7 @@ export default function Home() {
       {/* Acerca de Section */}
       <section
         id="acerca"
-        className="py-20 bg-gradient-to-br from-purple-50 to-blue-50"
+        className="py-20 bg-gradient-to-br from-blue-50 to-blue-50"
       >
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
@@ -196,17 +196,17 @@ export default function Home() {
               Acerca de OrbitPay
             </h2>
             <p className="text-center text-gray-600 mb-12 text-lg animate-fadeInUp animation-delay-200">
-              9 años de trayectoria, miles de clientes asistidos, y un equipo de
-              expertos dedicado a brindarle el mejor apoyo financiero y el
-              servicio que usted merece.
+              9 años de trayectoria, miles de clientes asistidos,
+              <br /> y un equipo de expertos dedicado a brindarle el mejor apoyo
+              <br /> financiero y el servicio que usted merece.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-400">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-purple-600 mb-2">
+                <h3 className="text-3xl font-bold text-[#00003e] mb-2">
                   10,000+
                 </h3>
                 <p className="text-gray-600">Clientes Satisfechos</p>
@@ -221,7 +221,7 @@ export default function Home() {
               </div>
 
               <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-800">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-cyan-600 mb-2">9+</h3>
@@ -256,42 +256,36 @@ export default function Home() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-400">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Zap className="w-8 h-8 text-white" />
+            <div className="group p-8 rounded-2xl bg-gradient-to-br from-[#00003e] to-blue-500 text-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-400 text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto shadow-md group-hover:scale-110 transition-transform">
+                <Zap className="w-8 h-8 text-[#00003e]" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                Procesamiento Rápido
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-4">Procesamiento Rápido</h3>
+              <p className="text-white/90 leading-relaxed">
                 Automatiza tus procesos de negocio con nuestra tecnología de
                 última generación. Reduce tiempos de espera y aumenta la
                 eficiencia hasta en un 300%.
               </p>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-600">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Shield className="w-8 h-8 text-white" />
+            <div className="group p-8 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-600 text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto shadow-md group-hover:scale-110 transition-transform">
+                <Shield className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                Seguridad Máxima
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-4">Seguridad Máxima</h3>
+              <p className="text-white/90 leading-relaxed">
                 Protección de nivel bancario con encriptación end-to-end.
                 Certificaciones ISO 27001 y cumplimiento total con GDPR para tu
                 tranquilidad.
               </p>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-800">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CreditCard className="w-8 h-8 text-white" />
+            <div className="group p-8 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-300 text-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fadeInUp animation-delay-800 text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto shadow-md group-hover:scale-110 transition-transform">
+                <CreditCard className="w-8 h-8 text-emerald-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                Pagos Integrados
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold mb-4">Pagos Integrados</h3>
+              <p className="text-white/90 leading-relaxed">
                 Acepta pagos de todo el mundo con Stripe. Soporte para más de
                 135 monedas y métodos de pago locales e internacionales.
               </p>
@@ -303,7 +297,7 @@ export default function Home() {
       {/* Preguntas Frecuentes Section */}
       <section
         id="preguntas"
-        className="py-20 bg-gradient-to-br from-slate-50 to-purple-50"
+        className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
       >
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 animate-fadeInUp">
@@ -345,7 +339,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-gray-900 pr-4">
                     {faq.q}
                   </h3>
-                  <ChevronDown className="w-5 h-5 text-purple-600 transition-transform group-open:rotate-180" />
+                  <ChevronDown className="w-5 h-5 text-[#00003e] transition-transform group-open:rotate-180" />
                 </summary>
                 <div className="px-6 pb-6 text-gray-700 leading-relaxed">
                   {faq.a}
@@ -359,14 +353,14 @@ export default function Home() {
       {/* Conviértete en Agente Section */}
       <section
         id="agente"
-        className="py-20 bg-gradient-to-br from-purple-600 to-blue-600 text-white"
+        className="py-20 bg-gradient-to-br from-[#00003e] via-[#0050d4] to-[#00abff] text-white"
       >
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeInUp">
               Conviértete en Agente
             </h2>
-            <p className="text-xl mb-12 text-purple-100 animate-fadeInUp animation-delay-200">
+            <p className="text-xl mb-12 text-blue-100 animate-fadeInUp animation-delay-200">
               Únete a nuestro equipo de agentes y genera ingresos ayudando a
               otros a crecer
             </p>
@@ -374,15 +368,15 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl animate-fadeInUp animation-delay-400">
                 <div className="text-4xl font-bold mb-2">30%</div>
-                <p className="text-purple-100">Comisión por venta</p>
+                <p className="text-blue-100">Comisión por venta</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl animate-fadeInUp animation-delay-600">
                 <div className="text-4xl font-bold mb-2">24/7</div>
-                <p className="text-purple-100">Soporte dedicado</p>
+                <p className="text-blue-100">Soporte dedicado</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl animate-fadeInUp animation-delay-800">
                 <div className="text-4xl font-bold mb-2">∞</div>
-                <p className="text-purple-100">Potencial ilimitado</p>
+                <p className="text-blue-100">Potencial ilimitado</p>
               </div>
             </div>
 
@@ -412,7 +406,7 @@ export default function Home() {
 
             <button
               onClick={() => scrollToSection("contacto")}
-              className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 flex items-center gap-2 mx-auto animate-fadeInUp animation-delay-1200"
+              className="bg-white text-[#00003e] px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 flex items-center gap-2 mx-auto animate-fadeInUp animation-delay-1200"
             >
               Quiero ser Agente
               <ArrowRight className="w-5 h-5" />
@@ -439,13 +433,13 @@ export default function Home() {
                   Información de Contacto
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors">
-                    <Mail className="w-6 h-6 text-purple-600 mt-1" />
+                  <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors">
+                    <Mail className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
-                      <div className="font-semibold text-gray-900">Email</div>
+                      <div className="font-semibold text-blue-700">Email</div>
                       <a
                         href="mailto:soporte@tudominio.com"
-                        className="text-purple-600 hover:underline"
+                        className="text-blue-600 hover:underline"
                       >
                         soporte@tudominio.com
                       </a>
@@ -455,7 +449,7 @@ export default function Home() {
                   <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors">
                     <Phone className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
-                      <div className="font-semibold text-gray-900">
+                      <div className="font-semibold text-blue-700">
                         Teléfono
                       </div>
                       <a
@@ -467,13 +461,13 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors">
-                    <MapPin className="w-6 h-6 text-green-600 mt-1" />
+                  <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors">
+                    <MapPin className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
-                      <div className="font-semibold text-gray-900">
+                      <div className="font-semibold text-blue-700">
                         Dirección
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-black">
                         123 Calle Principal
                         <br />
                         Ciudad, País 12345
@@ -483,11 +477,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-xl">
-                <h4 className="font-bold text-gray-900 mb-2">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
+                <h4 className="font-bold text-blue-700 mb-2">
                   Horario de Atención
                 </h4>
-                <p className="text-gray-700">
+                <p className="text-black">
                   Lunes a Viernes: 9:00 AM - 6:00 PM
                   <br />
                   Sábados: 10:00 AM - 2:00 PM
@@ -510,7 +504,7 @@ export default function Home() {
                   type="text"
                   id="name"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -526,7 +520,7 @@ export default function Home() {
                   type="email"
                   id="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -542,7 +536,7 @@ export default function Home() {
                   type="text"
                   id="subject"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition"
                   placeholder="¿En qué podemos ayudarte?"
                 />
               </div>
@@ -558,14 +552,14 @@ export default function Home() {
                   id="message"
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00003e] focus:border-transparent outline-none transition resize-none"
                   placeholder="Escribe tu mensaje aquí..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                className="w-full bg-[#00003e] text-white py-2 sm:py-3 rounded-lg font-semibold hover:bg-[#008dff] transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 sm:gap-2 text-sm sm:text-base hover:scale-105"
               >
                 Enviar Mensaje
                 <ArrowRight className="w-5 h-5" />
@@ -576,13 +570,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-[#00003e] text-white py-12">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">
-                TuMarca
-              </h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">OrbitPay</h3>
               <p className="text-gray-400">
                 Impulsando negocios hacia el futuro con tecnología de
                 vanguardia.
@@ -594,19 +586,19 @@ export default function Home() {
               <div className="space-y-2">
                 <button
                   onClick={() => scrollToSection("acerca")}
-                  className="block text-gray-400 hover:text-purple-400 transition"
+                  className="block text-gray-400 hover:text-blue-400 transition"
                 >
                   Acerca de
                 </button>
                 <button
                   onClick={() => scrollToSection("servicios")}
-                  className="block text-gray-400 hover:text-purple-400 transition"
+                  className="block text-gray-400 hover:text-blue-400 transition"
                 >
                   Servicios
                 </button>
                 <button
                   onClick={() => scrollToSection("preguntas")}
-                  className="block text-gray-400 hover:text-purple-400 transition"
+                  className="block text-gray-400 hover:text-blue-400 transition"
                 >
                   FAQ
                 </button>
@@ -618,19 +610,19 @@ export default function Home() {
               <div className="space-y-2">
                 <a
                   href="#"
-                  className="block text-gray-400 hover:text-purple-400 transition"
+                  className="block text-gray-400 hover:text-blue-400 transition"
                 >
                   Términos de Servicio
                 </a>
                 <a
                   href="#"
-                  className="block text-gray-400 hover:text-purple-400 transition"
+                  className="block text-gray-400 hover:text-blue-400 transition"
                 >
                   Política de Privacidad
                 </a>
                 <a
                   href="#"
-                  className="block text-gray-400 hover:text-purple-400 transition"
+                  className="block text-gray-400 hover:text-blue-400 transition"
                 >
                   Política de Cookies
                 </a>
@@ -642,19 +634,19 @@ export default function Home() {
               <div className="flex gap-4">
                 <a
                   href="#"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00003e] transition"
                 >
                   <span className="sr-only">Facebook</span>f
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00003e] transition"
                 >
                   <span className="sr-only">Twitter</span>𝕏
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-purple-600 transition"
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00003e] transition"
                 >
                   <span className="sr-only">Instagram</span>📷
                 </a>
@@ -663,7 +655,13 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>© 2025 TuMarca. Todos los derechos reservados.</p>
+            <p>© 2025 OrbitPay. Todos los derechos reservados.</p>
+            <p className="mt-2 text-sm text-gray-400">
+              Diseñado por{" "}
+              <a href="#" className="text-[#008dff] hover:underline">
+                Takariwa Studio
+              </a>
+            </p>
           </div>
         </div>
       </footer>

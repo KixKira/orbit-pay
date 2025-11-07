@@ -206,18 +206,18 @@ select:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #008DFF 0%, #00ABFF 100%);
+  background: linear-gradient(180deg, #008dff 0%, #00abff 100%);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #0050D4 0%, #00108B 100%);
+  background: linear-gradient(180deg, #0050d4 0%, #00108b 100%);
 }
 
 /* Soporte para Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #9333ea #f1f1f1;
+  scrollbar-color: #00108b #f1f1f1;
 }
 
 /* Efectos de glass morphism */
@@ -230,15 +230,15 @@ select:focus {
 
 /* Gradientes personalizados */
 .gradient-brand-dark {
-  background: linear-gradient(135deg, #00003E 0%, #00108B 40%, #0050D4 100%);
+  background: linear-gradient(135deg, #00003e 0%, #00108b 40%, #0050d4 100%);
 }
 
 .gradient-brand {
-  background: linear-gradient(135deg, #008DFF 0%, #00ABFF 100%);
+  background: linear-gradient(135deg, #008dff 0%, #00abff 100%);
 }
 
 .gradient-text-brand {
-  background: linear-gradient(135deg, #00ABFF 0%, #008DFF 60%, #0050D4 100%);
+  background: linear-gradient(135deg, #00abff 0%, #008dff 60%, #0050d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

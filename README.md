@@ -97,7 +97,7 @@ Abre [http://localhost:3000](http://localhost:3000)
 
 En `app/page.tsx` y `components/CheckoutForm.tsx`, busca las clases de Tailwind:
 
-- `purple-600` → Color principal
+- `blue-600` → Color principal
 - `blue-600` → Color secundario
 - `slate-900` → Color oscuro
 
